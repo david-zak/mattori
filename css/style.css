@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat'; }
+
+body {
+  background-color: white; }
+
+.container .nav-button {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+  cursor: pointer;
+  display: none; }
+  .container .nav-button svg {
+    fill: white; }
+.container .nav-button.dark svg {
+  fill: #2c3e50; }
+.container nav {
+  width: 100%;
+  height: 80px;
+  padding: 0 50px;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  transition: ease 300ms; }
+  .container nav .logo {
+    width: 120px;
+    height: 60px;
+    float: left;
+    cursor: pointer;
+    margin: 10px 0; }
+    .container nav .logo img {
+      width: 100%; }
+  .container nav .close-button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none; }
+    .container nav .close-button svg {
+      fill: #34495e; }
+  .container nav ul {
+    float: right; }
+  .container nav li {
+    display: inline;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #E7E8E9;
+    line-height: 80px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: ease 100ms; }
+  .container nav li.different {
+    line-height: 46px;
+    padding: 15px 20px;
+    border-radius: 23px;
+    background-color: #c0392b;
+    color: white;
+    cursor: pointer;
+    transition: ease 300ms; }
+  .container nav li:hover {
+    color: #c0392b;
+    transition: ease 100ms; }
+  .container nav li.different:hover {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    transition: ease 300ms; }
+.container nav.fixed ul li {
+  color: #2c3e50; }
+.container nav.fixed ul li:hover {
+  color: #c0392b; }
+.container nav.fixed ul li.different {
+  color: white; }
+.container nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
+  border-bottom: 2px solid #DDD; }
+  .container nav.fixed ul li a {
+    color: #636e72; }
+  .container nav.fixed ul li a:hover, .container nav.fixed ul li a.active {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50; }
+  .container nav.fixed ul li a.different {
+    color: white; }
+  .container nav.fixed ul li a.different:hover {
+    border: none; }
+.container header {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/header-wallpaper.jpg) center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  display: table;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); }
+  .container header .filter {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(2, 0, 36, 0.2) 0%, rgba(9, 9, 121, 0.3) 35%, rgba(0, 212, 255, 0.4) 100%); }
+  .container header .text {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    left: 7.5%;
+    z-index: 3; }
+    .container header .text h1 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 3em; }
+    .container header .text p {
+      margin-top: 15px;
+      color: #F0F0F0;
+      font-size: 15px;
+      line-height: 25px; }
+    .container header .text button {
+      margin-top: 30px;
+      padding: 0 20px;
+      height: 50px;
+      border-radius: 25px;
+      border: none;
+      background-color: #c0392b;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      color: white;
+      cursor: pointer;
+      transition: ease 300ms; }
+    .container header .text button:hover {
+      background-color: #2c3e50;
+      color: white;
+      transition: ease 300ms; }
+.container #about {
+  width: 100%;
+  padding: 5% 2% 3% 3%;
+  overflow: hidden; }
+  .container #about h1 {
+    text-align: center;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    color: #2c3e50; }
+  .container #about .wrapper {
+    width: 100%;
+    margin: 40px 0 80px 0;
+    overflow: hidden; }
+    .container #about .wrapper .text {
+      width: 70%;
+      margin: 0 auto; }
+      .container #about .wrapper .text p {
+        text-align: justify;
+        padding-bottom: 10px;
+        font-size: 13px;
+        line-height: 23px;
+        letter-spacing: 0.5px; }
+    .container #about .wrapper .features {
+      width: 70%;
+      margin: 25px auto 0 auto;
+      text-align: center; }
+      .container #about .wrapper .features .feature {
+        width: 32.5%;
+        display: inline-block;
+        padding: 0 15px;
+        vertical-align: top; }
+        .container #about .wrapper .features .feature .image {
+          width: 70px;
+          height: 70px;
+          fill: #2c3e50;
+          margin: 0 auto 10px auto; }
+          .container #about .wrapper .features .feature .image svg {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            fill: #c0392b; }
+        .container #about .wrapper .features .feature h2 {
+          font-size: 20px;
+          letter-spacing: 0.5px;
+          margin-bottom: 15px; }
+        .container #about .wrapper .features .feature p {
+          font-size: 13px;
+          text-align: justify;
+          line-height: 22px;
+          letter-spacing: 0.3px; }
+      .container #about .wrapper .features .feature:first-child {
+        padding: 0 15px 0 0; }
+      .container #about .wrapper .features .feature:last-child {
+        padding: 0 0 0 15px; }
+  .container #about .partners {
+    width: 100%; }
+    .container #about .partners h2 {
+      font-size: 1.5em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #34495e; }
+    .container #about .partners .wrapper {
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      margin: 30px 0 0 0; }
+      .container #about .partners .wrapper .company {
+        width: 15%;
+        height: 150px;
+        display: inline-block;
+        margin: 0 25px 50px 25px; }
+        .container #about .partners .wrapper .company img {
+          width: 100%; }
+.container #properties {
+  width: 100%;
+  padding: 4% 3%;
+  background-color: #F4F5F6;
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%); }
+  .container #properties h1 {
+    text-align: center;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    color: #2c3e50; }
+  .container #properties p {
+    text-align: center;
+    margin-top: 15px;
+    color: #7f8c8d; }
+  .container #properties .wrapper {
+    width: 92%;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+    text-align: center; }
+    .container #properties .wrapper .property {
+      width: 21.5%;
+      display: inline-block;
+      background-color: white;
+      margin: 0 1.5% 3% 1.5%;
+      overflow: hidden;
+      border-radius: 10px; }
+      .container #properties .wrapper .property .image {
+        width: 100%; }
+        .container #properties .wrapper .property .image img {
+          width: 100%; }
+      .container #properties .wrapper .property .text {
+        width: 100%;
+        padding: 25px; }
+        .container #properties .wrapper .property .text h1 {
+          font-size: 18px;
+          margin-bottom: 15px; }
+        .container #properties .wrapper .property .text p {
+          font-size: 13px;
+          letter-spacing: 0.25px;
+          text-align: left;
+          margin: 0 0 10px 0; }
+        .container #properties .wrapper .property .text button {
+          margin-top: 5px;
+          padding: 0 15px;
+          height: 40px;
+          border-radius: 25px;
+          border: none;
+          background-color: #c0392b;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 11px;
+          letter-spacing: 0.4px;
+          color: white;
+          cursor: pointer;
+          transition: ease 300ms; }
+        .container #properties .wrapper .property .text button:hover {
+          background-color: #2c3e50;
+          color: white;
+          transition: ease 300ms; }
+.container #contact {
+  width: 100%;
+  padding: 4% 3%; }
+  .container #contact .wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative; }
+    .container #contact .wrapper .info {
+      width: 50%;
+      float: left;
+      padding: 3%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .container #contact .wrapper .info h1 {
+        font-size: 2.5em;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px; }
+      .container #contact .wrapper .info p {
+        color: #636e72;
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 15px;
+        text-align: justify; }
+      .container #contact .wrapper .info .blocks {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 25px;
+        text-align: center; }
+        .container #contact .wrapper .info .blocks .block {
+          width: 32%;
+          background-color: #F4F5F6;
+          margin: 0% 2% 2% 0;
+          padding: 15px;
+          display: inline-block;
+          vertical-align: top; }
+          .container #contact .wrapper .info .blocks .block h1 {
+            font-size: 1.25em;
+            text-align: left;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #c0392b; }
+          .container #contact .wrapper .info .blocks .block p {
+            margin-bottom: 0; }
+        .container #contact .wrapper .info .blocks .block:last-child {
+          margin: 0% 0% 2% 0; }
+    .container #contact .wrapper .form {
+      width: 50%;
+      float: right;
+      padding: 3%; }
+      .container #contact .wrapper .form form {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden; }
+        .container #contact .wrapper .form form input[type=text] {
+          width: 100%;
+          height: 50px;
+          margin-bottom: 25px;
+          padding: 0 15px;
+          border: none;
+          background-color: transparent;
+          border-bottom: 2px solid #7f8c8d;
+          color: #34495e;
+          transition: ease 300ms; }
+        .container #contact .wrapper .form form input[type=text]:focus, .container #contact .wrapper .form form textarea:focus {
+          border-bottom: 2px solid #2c3e50;
+          color: #2c3e50;
+          transition: ease 300ms; }
+        .container #contact .wrapper .form form textarea {
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          height: 100px;
+          min-height: 100px;
+          max-height: 250px;
+          margin-bottom: 20px;
+          padding: 15px 10px;
+          border: none;
+          background-color: transparent;
+          border-bottom: 2px solid #7f8c8d;
+          color: #34495e;
+          transition: ease 300ms;
+          color: white; }
+        .container #contact .wrapper .form form input[type=submit] {
+          line-height: 46px;
+          display: block;
+          padding: 0 20px;
+          border-radius: 23px;
+          background-color: #c0392b;
+          color: white;
+          cursor: pointer;
+          transition: ease 300ms;
+          border: none;
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 0.4px;
+          color: white;
+          transition: ease 300ms; }
+        .container #contact .wrapper .form form input[type=submit]:hover {
+          background-color: #2c3e50;
+          transition: ease 300ms; }
+.container footer {
+  width: 100%;
+  height: 100px;
+  background-color: #2c3e50; }
+  .container footer p {
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 14px; }
+.container .back-button {
+  position: fixed;
+  z-index: 99999;
+  top: 15px;
+  left: 15px; }
+  .container .back-button button {
+    height: 40px;
+    padding: 0 15px;
+    background-color: #C0392B;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: white;
+    transition: ease 300ms; }
+  .container .back-button button:hover {
+    background-color: #2c3e50;
+    color: white;
+    transition: ease 300ms; }
+.container .property {
+  width: 80%;
+  margin: 50px auto; }
+  .container .property .top {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px; }
+    .container .property .top .image {
+      width: 35%;
+      overflow: hidden;
+      border-radius: 10px;
+      float: left; }
+      .container .property .top .image img {
+        width: 100%;
+        display: block; }
+    .container .property .top .main-info {
+      width: 65%;
+      float: left;
+      padding: 10px 10px 10px 20px; }
+      .container .property .top .main-info h1 {
+        color: #2c3e50;
+        text-transform: uppercase;
+        font-size: 1.75em;
+        margin-bottom: 15px; }
+      .container .property .top .main-info p {
+        color: #7f8c8d;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        margin-bottom: 5px; }
+
+@media (max-width: 1340px) {
+  .container #about .partners .wrapper .company {
+    width: 30%; }
+  .container #properties {
+    padding: 100px 0; }
+    .container #properties .wrapper .property {
+      width: 29.5%; }
+  .container #contact .wrapper .info .blocks .block {
+    width: 45%; } }
+@media (max-width: 1024px) {
+  .container #about .wrapper {
+    width: 85%;
+    margin: 25px auto; }
+    .container #about .wrapper .text {
+      width: 90%; }
+    .container #about .wrapper .features {
+      width: 90%; }
+  .container #about .partners .wrapper .company {
+    width: 27.5%; }
+  .container #properties .wrapper .property {
+    width: 46.5%; }
+  .container #contact .wrapper .info {
+    width: 100%;
+    float: none;
+    position: relative;
+    top: 0;
+    transform: translateY(0); }
+  .container #contact .wrapper .form {
+    width: 100%;
+    float: none; } }
+@media (max-width: 550px) {
+  .container .nav-button {
+    display: block; }
+  .container nav {
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0 0 0;
+    background-color: white;
+    position: fixed;
+    display: none; }
+    .container nav .logo {
+      width: 50%;
+      height: auto;
+      margin: 0 25% 20px 25%;
+      overflow: hidden;
+      float: none; }
+    .container nav .close-button {
+      display: block; }
+    .container nav ul {
+      width: 100%;
+      float: none;
+      margin-top: 20px;
+      text-align: center; }
+      .container nav ul li {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 50px;
+        color: #2c3e50;
+        border: none;
+        margin: 0 0 10px 0;
+        display: block; }
+      .container nav ul li.different {
+        width: auto;
+        display: inline-block;
+        line-height: 50px;
+        padding: 0 25px; }
+  .container header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%); }
+    .container header .text {
+      left: 0;
+      padding: 0 15px; }
+      .container header .text h1 {
+        font-size: 1.5em; }
+      .container header .text p {
+        margin-top: 10px; }
+      .container header .text button {
+        margin-top: 15px;
+        height: 45px; }
+  .container #about {
+    padding: 25px 10px 0 10px; }
+    .container #about .wrapper {
+      width: 100%;
+      margin: 20px 0 10px 0; }
+      .container #about .wrapper .text {
+        width: 100%;
+        padding: 0 5px; }
+        .container #about .wrapper .text p {
+          font-size: 12px;
+          letter-spacing: 0; }
+      .container #about .wrapper .features {
+        width: 100%;
+        margin: 5px 0 0 0; }
+        .container #about .wrapper .features .feature, .container #about .wrapper .features .feature:first-child, .container #about .wrapper .features .feature:last-child {
+          width: 100%;
+          margin: 0 0 15px 0;
+          padding: 0 5px; }
+          .container #about .wrapper .features .feature .image, .container #about .wrapper .features .feature:first-child .image, .container #about .wrapper .features .feature:last-child .image {
+            margin: 0 auto; }
+          .container #about .wrapper .features .feature h2, .container #about .wrapper .features .feature:first-child h2, .container #about .wrapper .features .feature:last-child h2 {
+            margin-bottom: 10px; }
+          .container #about .wrapper .features .feature p, .container #about .wrapper .features .feature:first-child p, .container #about .wrapper .features .feature:last-child p {
+            font-size: 12px; }
+    .container #about .partners .wrapper {
+      margin-top: 15px; }
+      .container #about .partners .wrapper .company {
+        width: calc(50% - 13px);
+        margin: 0 5px 10px 5px; }
+  .container #properties {
+    padding: 40px 10px;
+    -webkit-clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 100%);
+    clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 100%); }
+    .container #properties .wrapper {
+      width: 100%;
+      margin: 15px 0 0 0; }
+      .container #properties .wrapper .property {
+        width: 100%;
+        margin: 0 0 10px 0; }
+  .container #contact {
+    width: 100%;
+    padding: 30px 10px;
+    overflow: hidden; }
+    .container #contact .wrapper .text {
+      width: 100%;
+      padding: 0;
+      position: relative;
+      top: 0%;
+      transform: translateY(0%); }
+      .container #contact .wrapper .text h1 {
+        margin-bottom: 10px; }
+      .container #contact .wrapper .text p {
+        font-size: 12px;
+        line-height: 23px; }
+    .container #contact .wrapper .form {
+      width: 100%;
+      padding: 0; }
+      .container #contact .wrapper .form form {
+        width: 100%; }
+  .container footer {
+    height: auto; }
+    .container footer p {
+      font-size: 12px;
+      line-height: 20px;
+      padding: 25px 0; } }
+
+/*# sourceMappingURL=style.css.map */
